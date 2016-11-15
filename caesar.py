@@ -1,5 +1,11 @@
 #!/usr/bin/env python2
 
+"""
+Joshua Womack
+CPSC 353 - Intro to Security
+Fall 2016
+"""
+
 import sys
 
 
