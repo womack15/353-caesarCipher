@@ -11,6 +11,7 @@ import sys
 
 def main():
     try:
+        message = ''
         mode = sys.argv[1].lower()
 
         # Encrypt or decrypt?
@@ -19,14 +20,16 @@ def main():
                 raise Exception
             else:
                 rot = int(sys.argv[2])
-                message = sys.argv[3]
+                for i in range(3, len(sys.argv)):
+                    message += sys.argv[i] + ' '
 
             print 'Encrypting...'
             message = encrypt(rot, message)
             print message
 
         elif mode == "-d":
-            message = sys.argv[2]
+            for i in range(2, len(sys.argv)):
+                message += sys.argv[i] + ' '
             print 'Decrypting...'
             message = decrypt(message)
             print 'All possible plaintext:'
