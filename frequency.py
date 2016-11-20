@@ -10,6 +10,7 @@ import sys
 
 
 def main():
+    charCount = 0
     ciphertext = ''
     freqdict = {}
 
@@ -20,7 +21,14 @@ def main():
         ciphertext = ciphertext.lower()
 
         for i in range(len(ciphertext)):
+            if ciphertext[i] != ' ':
+                charCount += 1
+
+        for i in range(len(ciphertext)):
             freqdict[ord(ciphertext[i])] = freqdict.get(ord(ciphertext[i]), 0) + 1
+
+        for josh in freqdict.items():
+            print (float(josh[1]) / 35) * 100
 
         for key, value in freqdict.items():
             print '{}: {}'.format(chr(key), value)
