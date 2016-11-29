@@ -13,7 +13,6 @@ def main():
     charCount = 0
     ciphertext = ''
     freqdict = {}
-    letterfreq = {97:8.167, 98:1.492, 99:2.782, 100:4.253, 101:12.702, 102:2.228, 103:2.105, 104:6.094, 105:6.966}
 
     try:
         for i in range(1, len(sys.argv)):
@@ -33,10 +32,6 @@ def main():
 
         for key, value in freqdict.items():
             print '{}: {}'.format(chr(key), value)
-
-#        for key, value in freqdict.items():
-#            freqdict[key] = letterfreq[key]
-
 
     except:
         print 'frequency.py unknown arguments'
