@@ -36,7 +36,7 @@ def main():
     except:
         print 'frequency.py unknown arguments'
         print 'Usage:'
-        print '\tpython frequency.py <Message>'
+        print '\t./frequency.py <Message>'
         print '\t<Message> --> Plaintext to encrypt'
         exit(-1)
 

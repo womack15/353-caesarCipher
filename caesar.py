@@ -45,7 +45,7 @@ def main():
 
     except:
         print 'caesar.py unknown arguments'
-        print 'Usage: python caesar.py <-e|-d> <N> <Message>'
+        print 'Usage: ./caesar.py <-e|-d> <N> <Message>'
         print '  <-e>\t\tencrypt'
         print '  <-d>\t\tdecrypt'
         print '  <N>\t\tPositive ingeger specifying how much to rotate by'
