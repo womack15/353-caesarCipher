@@ -28,7 +28,7 @@ def main():
             freqdict[ord(ciphertext[i])] = freqdict.get(ord(ciphertext[i]), 0) + 1
 
         for key, value in freqdict.items():
-            freqdict[key] = (float(freqdict[key]) / 35) * 100
+            freqdict[key] = (float(freqdict[key]) / charCount) * 100
 
         for key, value in freqdict.items():
             print '{}: {}'.format(chr(key), value)
